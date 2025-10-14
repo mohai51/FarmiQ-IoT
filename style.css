@@ -211,7 +211,7 @@ h2 {
   animation: mosProgress 1s ease-out forwards;
 }
 
-/* ---------- Fan & Light Section ---------- */
+/* ---------- Fan & Light Section (Updated) ---------- */
 .control-section {
   display: flex;
   justify-content: center;
@@ -223,14 +223,14 @@ h2 {
 
 .control-box {
   background: #ffffff;
-  border: 3px solid #00422B;
-  border-radius: 20px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-  padding: 20px 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  padding: 20px 35px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 280px;
+  border: none;
 }
 
 .icon-title {
@@ -242,68 +242,74 @@ h2 {
   color: #00422B;
 }
 
+/* Toggle switch style (modern ON/OFF like image) */
 .switch {
   display: flex;
   align-items: center;
-  border-radius: 25px;
-  background: #003B25;
-  overflow: hidden;
+  background: #E5F9E3;
+  border-radius: 40px;
+  padding: 4px;
+  gap: 2px;
 }
 
 .switch button {
   border: none;
   outline: none;
-  padding: 10px 10px;
-  font-weight: 400;
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-weight: 600;
   cursor: pointer;
-  color: white;
+  font-size: 15px;
+  transition: all 0.3s ease;
   background: transparent;
-  transition: background 0.3s;
+  color: #00422B;
 }
 
 .switch .on.active {
   background: #00C853;
   color: white;
-  border-radius: 25px 0 0 25px;
 }
 
 .switch .off.active {
   background: #d32f2f;
   color: white;
-  border-radius: 0 25px 25px 0;
 }
 
-/* ---------- Greenhouse Status ---------- */
+/* ---------- Greenhouse Status (Updated) ---------- */
 .greenhouse-box {
-  background: white;
-  border: 3px solid #00422B;
-  border-radius: 18px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   width: 320px;
   padding: 20px;
   text-align: center;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  border: none;
 }
 
 .greenhouse-box h3 {
-  background: #00422B;
-  color: white;
-  padding: 8px;
-  border-radius: 10px;
-  margin-bottom: 10px;
+  color: #00422B;
   font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 15px;
 }
 
 #statusText {
+  background: #E5F9E3;
+  border-radius: 15px;
+  padding: 15px;
   color: #00422B;
   font-weight: 500;
-  line-height: 1.5;
-  font-size: 15px;
+  font-size: 14px;
+  line-height: 1.6;
+  box-shadow: inset 0 0 5px rgba(0, 179, 90, 0.15);
 }
 
 .status-emoji {
   font-size: 28px;
-  margin-top: 10px;
+  margin-top: 12px;
+  color: #00C853;
 }
+
 
 /* ---------- Footer ---------- */
 footer {
