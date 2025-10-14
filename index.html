@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FarmiQ Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="left">
+      <div class="menu">
+        <img src="menu.png" alt="Menu" width="30" height="30">
+      </div>
+      <div class="auto-mode">
+        <span>Automatic Mode</span>
+        <button id="autoToggle" class="toggle">
+          <span class="dot"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="logo">
+      <img src="Logo1.png" width="140px" height="40px" alt="Logo">
+    </div>
+
+    <div class="right">
+      <div class="icon"><img src="p.png" alt="Profile" width="25" height="25"></div>
+      <div class="icon"><img src="plant.png" alt="Plant" width="25" height="25"></div>
+      <div class="icon"><img src="not.png" alt="Bell" width="25" height="25"></div>
+      <div class="icon"><img src="chat.png" alt="Chat" width="25" height="25"></div>
+    </div>
+  </nav>
+
+  <!-- Sensor Circles -->
+  <div class="container">
+    <!-- Temperature -->
+    <div class="circle">
+      <div class="outer">
+        <div class="inner"><div class="value" id="temp">0°C</div></div>
+      </div>
+      <div class="h"><img src="temp.png" alt="Temp" width="25"></div>
+      <svg width="160" height="160">
+        <defs>
+          <linearGradient id="gradientcolor">
+            <stop offset="0%" stop-color="#0DFF00" />
+            <stop offset="100%" stop-color="#00B35A" />
+          </linearGradient>
+        </defs>
+        <circle id="tempCircle" cx="80" cy="80" r="70" />
+      </svg>
+      <h2>Temperature</h2>
+    </div>
+
+    <!-- Humidity -->
+    <div class="circle">
+      <div class="outer">
+        <div class="inner"><div class="value" id="hum">0%</div></div>
+      </div>
+      <div class="h"><img src="humi.png" alt="Humidity" width="25"></div>
+      <svg width="160" height="160">
+        <circle id="humCircle" cx="80" cy="80" r="70" stroke="url(#gradientcolor)" />
+      </svg>
+      <h2>Humidity</h2>
+    </div>
+
+    <!-- Moisture -->
+    <div class="circle">
+      <div class="outer">
+        <div class="inner"><div class="value" id="mos">0%</div></div>
+      </div>
+      <div class="h"><img src="mos.png" alt="Moisture" width="25"></div>
+      <svg width="160" height="160">
+        <circle id="mosCircle" cx="80" cy="80" r="70" stroke="url(#gradientcolor)" />
+      </svg>
+      <h2>Moisture</h2>
+    </div>
+  </div>
+
+  <!-- Fanlight + Greenhouse -->
+  <div class="control-section">
+    <div class="control-box">
+      <div class="icon-title">
+        <img src="fan.png" alt="Fan" width="20">
+        <span>Fan Status</span>
+      </div>
+      <div class="switch">
+        <button id="fanOn" class="on active">ON</button>
+        <button id="fanOff" class="off">OFF</button>
+      </div>
+    </div>
+
+    <div class="control-box">
+      <div class="icon-title">
+        <img src="light.png" alt="Light" width="20">
+        <span>Light Status</span>
+      </div>
+      <div class="switch">
+        <button id="lightOn" class="on active">ON</button>
+        <button id="lightOff" class="off">OFF</button>
+      </div>
+    </div>
+
+    <div class="greenhouse-box">
+      <h3>Green House Status</h3>
+      <div id="statusText">
+        Humidity ok!<br>
+        Moisture is ok!<br>
+        Temperature is ok. Don’t Turn on the FAN!<br>
+        Temperature is ok. Don’t Turn on the Light!
+      </div>
+      <div class="status-emoji">😊</div>
+    </div>
+  </div>
+
+  <footer>Powered by <strong>FarmiQ</strong></footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

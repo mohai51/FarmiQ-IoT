@@ -1,0 +1,315 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(145deg, #e2f9e1, #c5f0c2);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+  width: 100%;
+  padding: 18px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8fff7;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.menu img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.auto-mode {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  color: #00422B;
+}
+
+.toggle {
+  width: 50px;
+  height: 24px;
+  background: #c0f5c0;
+  border: none;
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.toggle .dot {
+  width: 18px;
+  height: 18px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  transition: all 0.3s ease;
+}
+
+.toggle.active {
+  background: #00B35A;
+}
+
+.toggle.active .dot {
+  left: 28px;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.icon img {
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+}
+
+/* ---------- Circles ---------- */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+  flex-wrap: wrap;
+  margin-top: 140px;
+}
+
+.circle {
+  width: 160px;
+  height: 200px;
+  position: relative;
+  text-align: center;
+}
+
+.outer {
+  height: 160px;
+  width: 160px;
+  padding: 20px;
+  border-radius: 50%;
+  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+              -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+  position: relative;
+}
+
+.inner {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f2f2f2;
+  box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+              inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7),
+              0.5px 0.5px 0px rgba(0, 0, 0, 0.15),
+              0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+}
+
+.value {
+  font-weight: 600;
+  font-size: 22px;
+  color: #00422B;
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(-90deg);
+}
+
+circle {
+  fill: none;
+  stroke: url(#gradientcolor);
+  stroke-width: 20px;
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440;
+  stroke-linecap: round;
+}
+
+.h {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 45px;
+  height: 45px;
+}
+
+.h img {
+  width: 30px;
+  height: 30px;
+}
+
+h2 {
+  text-align: center;
+  color: #00422B;
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+/* ---------- Circle Animations ---------- */
+@keyframes tempProgress {
+  to {
+    stroke-dashoffset: 308; /* 30% */
+  }
+}
+
+@keyframes humProgress {
+  to {
+    stroke-dashoffset: 132; /* 70% */
+  }
+}
+
+@keyframes mosProgress {
+  to {
+    stroke-dashoffset: 193.6; /* 56% */
+  }
+}
+
+#tempCircle {
+  animation: tempProgress 1s ease-out forwards;
+}
+
+#humCircle {
+  animation: humProgress 1s ease-out forwards;
+}
+
+#mosCircle {
+  animation: mosProgress 1s ease-out forwards;
+}
+
+/* ---------- Fan & Light Section ---------- */
+.control-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 60px;
+}
+
+.control-box {
+  background: #ffffff;
+  border: 3px solid #00422B;
+  border-radius: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 280px;
+}
+
+.icon-title {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 17px;
+  gap: 10px;
+  color: #00422B;
+}
+
+.switch {
+  display: flex;
+  align-items: center;
+  border-radius: 25px;
+  background: #003B25;
+  overflow: hidden;
+}
+
+.switch button {
+  border: none;
+  outline: none;
+  padding: 10px 10px;
+  font-weight: 400;
+  cursor: pointer;
+  color: white;
+  background: transparent;
+  transition: background 0.3s;
+}
+
+.switch .on.active {
+  background: #00C853;
+  color: white;
+  border-radius: 25px 0 0 25px;
+}
+
+.switch .off.active {
+  background: #d32f2f;
+  color: white;
+  border-radius: 0 25px 25px 0;
+}
+
+/* ---------- Greenhouse Status ---------- */
+.greenhouse-box {
+  background: white;
+  border: 3px solid #00422B;
+  border-radius: 18px;
+  width: 320px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.greenhouse-box h3 {
+  background: #00422B;
+  color: white;
+  padding: 8px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+#statusText {
+  color: #00422B;
+  font-weight: 500;
+  line-height: 1.5;
+  font-size: 15px;
+}
+
+.status-emoji {
+  font-size: 28px;
+  margin-top: 10px;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  text-align: center;
+  font-size: 14px;
+  color: #00422B;
+  margin: 50px 0 30px;
+  font-weight: 600;
+}
