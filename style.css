@@ -216,9 +216,15 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 30px;
   flex-wrap: wrap;
+  gap: 30px;
   margin-top: 60px;
+}
+
+@media (min-width: 900px) {
+  .greenhouse-box {
+    margin-left: auto;  /* pushes it to the right */
+  }
 }
 
 .control-box {
@@ -277,6 +283,7 @@ h2 {
 
 /* ---------- Greenhouse Status (Updated) ---------- */
 .greenhouse-box {
+  display: flex;
   background: #ffffff;
   border-radius: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
@@ -284,6 +291,7 @@ h2 {
   padding: 20px;
   text-align: center;
   border: none;
+  order: 3;
 }
 
 .greenhouse-box h3 {
